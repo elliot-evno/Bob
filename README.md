@@ -1,4 +1,4 @@
-# Grew tired of Google Home saying that it didn't understand me so I built this guy who is a lot more understanding though very dull at times when calling his name.
+# Grew tired of Google Home saying that it didn't understand me so I built this guy who is a lot more understanding though dull at times when calling his name.
 
 ### To run: 
 1. Get an openai, elevenlabs api key.
