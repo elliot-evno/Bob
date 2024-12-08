@@ -82,8 +82,7 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 # Comment out ElevenLabs initialization
-# ELEVENLABS_API_KEY = "sk_ce786f8a8a834147b67667cd62cb2bc3677b38b8a1da2477"
-# elevenlabs_client = ElevenLabs(api_key=ELEVENLABS_API_KEY)
+# Hahaha, lol, try this api keys
 
 
 
