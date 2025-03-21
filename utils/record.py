@@ -2,8 +2,7 @@ import speech_recognition as sr
 import tempfile
 
 def record_audio(duration=None):
-    RATE = 16000
-    CHANNELS = 1
+
     
     recognizer = sr.Recognizer()
     recognizer.pause_threshold = 1.0  # Increased pause threshold

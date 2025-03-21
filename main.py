@@ -1,4 +1,3 @@
-import tempfile
 import speech_recognition as sr
 import pygame
 import threading
@@ -7,8 +6,7 @@ import datetime
 import spotipy
 import platform
 import subprocess
-from fuzzywuzzy import fuzz
-from spotify import *
+from .tools.spotify import *
 from .openai.whisper import *
 from .openai.generation import * 
 from .tools.search import *
@@ -46,26 +44,12 @@ PHRASE_TIMEOUT = 3  # Seconds to wait for a complete phrase
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
     global timer_active, timer_sound_thread, notification_sound, speech_thread, stop_speech, currently_playing, current_volume, temp_volume_reduction
     global mhm_stop_speech, answer_stop_speech, sp, current_volume
     
     # Initialize Spotify client
     try:
-        token_info = authorize_spotify()
         sp = spotipy.Spotify(auth_manager=auth_manager)
         print("Successfully authenticated with Spotify!")
         
