@@ -1,0 +1,6 @@
+pygame
+SpeechRecognition
+openai
+fuzzywuzzy
+duckduckgo-search
+spotipy
