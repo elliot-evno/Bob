@@ -1,15 +1,36 @@
-# Grew tired of Google Home saying that it didn't understand me so I built this guy who is a lot more understanding though dull at times when calling his name.
+# Bob - Your Understanding AI Assistant
 
-### To run: 
-1. Get an openai, elevenlabs api key.
-2. Create a spotify dev account and setup an app.
-3. Set the redirect uri in your spotify app to "http://localhost:8888/callback".
-4. Get the client id and client secret from spotify.
+A voice-controlled AI assistant that's more flexible than Google Home. Built with OpenAI, Spotify, and speech recognition.
 
-### Then just run:
- ```bash
-pip install sounddevice wave numpy pygame SpeechRecognition fuzzywuzzy duckduckgo-search spotipy platformdirs
+## Setup
+
+1. Create and activate virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
- ```bash
+
+2. Create `.env` file with:
+```bash
+OPENAI_API_KEY=your_openai_key
+SPOTIPY_CLIENT_ID=your_spotify_client_id
+SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
+SPOTIPY_REDIRECT_URI="http://localhost:8888/callback"
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run:
+```bash
 python main.py
 ```
+
+## Features
+- Voice commands with wake word "Bob"
+- Spotify music control
+- Timers & alarms
+- Web search
+- Volume control
