@@ -3,16 +3,15 @@ import speech_recognition as sr
 import pygame
 import threading
 import time
-from duckduckgo_search import DDGS
 import datetime
 import spotipy
 import platform
 import subprocess
 from fuzzywuzzy import fuzz
 from spotify import *
-from whisper import *
-from openai import *
-
+from openai.whisper import *
+from openai.openai import *
+from tools.search import *
 
 # Initialize pygame mixer for audio playback
 pygame.mixer.init()
@@ -204,15 +203,6 @@ def play_timer_sound():
         pygame.time.wait(2000)  # Wait for 2 seconds between plays
 
 
-
-
-
-
-
-def perform_search(query, num_results=3):
-    with DDGS() as ddgs:
-        results = list(ddgs.text(query, max_results=num_results))
-    return results
 
 
 
